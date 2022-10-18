@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Eyup\Desktop\java2022\3.hafta\homeWork3\.metadata\.plugins\org.eclipse.jdt.core
+2567059112.index
+1865797976.index
+345514108.index

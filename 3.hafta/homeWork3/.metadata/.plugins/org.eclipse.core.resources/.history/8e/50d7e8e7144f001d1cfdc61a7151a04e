@@ -1,0 +1,32 @@
+package manager;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import dataLogger.Logger;
+import entities.Category;
+
+public class CategoryManager {
+	private Category category;
+	private Logger[] logger;
+	private List<String> categoryNames = new ArrayList<>();
+	
+	public CategoryManager(Category category, Logger[] logger) {
+		this.category = category;
+		this.logger = logger;
+	}
+	
+	public void add(Category category) throws Exception {
+		for (String categoryName : categoryNames) {
+			if(category.getName() == categoryName) {
+				throw new Exception("Bu kategori sistemde mevcut!");
+			}
+			else {
+				for (Logger logger : logger) {
+					logger.add(category.getName());
+				}
+			}
+		}
+	}
+}
+

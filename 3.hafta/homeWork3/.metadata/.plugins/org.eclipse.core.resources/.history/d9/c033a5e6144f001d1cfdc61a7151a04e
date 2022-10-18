@@ -1,0 +1,32 @@
+package manager;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import dataLogger.Logger;
+import entities.Course;
+
+public class CourseManager {
+	private Course course;
+	private Logger[] loggers;
+	private List<String> courseNames = new ArrayList<>();
+	
+	public CourseManager(Course course, Logger[] loggers){
+		this.course = course;
+		this.loggers = loggers;
+	}
+	public void add(Course course) throws Exception {
+		for (String courseName : courseNames) {
+			if(courseName == course.getCourseName()) {
+				throw new Exception("Aynı isimde kurs olamaz!");
+			}
+			else {
+				for (Logger logger : loggers) {
+					logger.add(course.getCourseName());
+				}
+			}
+		}
+	}
+}
+

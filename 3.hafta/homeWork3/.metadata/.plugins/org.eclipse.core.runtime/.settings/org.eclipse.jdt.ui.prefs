@@ -1,0 +1,10 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="dataLogger.Logger"><rhs name\="dataLogger.DatabaseLogger"/><rhs name\="dataLogger.FileLogger"/><rhs name\="dataLogger.MailLogger"/></lhs><lhs name\="entities.Base"><rhs name\="entities.Instructore"/><rhs name\="entities.Category"/><rhs name\="entities.Student"/><rhs name\="entities.Course"/></lhs><lhs name\="entities.Student"><rhs name\="entities.Student"/></lhs><lhs name\="manager.StudentManager"><rhs name\="manager.StudentManager"/></lhs><lhs name\="dataAccess.IStudent"><rhs name\="dataAccess.HibernateStudent"/><rhs name\="dataAccess.JdbcStudent"/></lhs><lhs name\="manager.CategoryManager"><rhs name\="manager.CategoryManager"/></lhs><lhs name\="dataAccess.ICategory"><rhs name\="dataAccess.Hibernate"/><rhs name\="dataAccess.JdbcCategory"/></lhs><lhs name\="entities.Instructore"><rhs name\="entities.Instructore"/></lhs><lhs name\="manager.InstructoreManager"><rhs name\="manager.InstructoreManager"/></lhs><lhs name\="dataAccess.IInstructore"><rhs name\="dataAccess.HibernateInstructore"/><rhs name\="dataAccess.JdbcInteructore"/></lhs><lhs name\="entities.Category"><rhs name\="entities.Category"/></lhs><lhs name\="entities.Course"><rhs name\="entities.Course"/></lhs><lhs name\="manager.CourseManager"><rhs name\="manager.CourseManager"/></lhs><lhs name\="dataAccess.ICourse"><rhs name\="dataAccess.HibernateCourse"/><rhs name\="dataAccess.JdbcCourse"/></lhs></history>
+content_assist_number_of_computers=17
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="entities.Base"/>
+    <fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.ForegroundAction"/>
+    <fullyQualifiedTypeName name="dataAccess.ICategory"/>
+    <fullyQualifiedTypeName name="dataAccess.ICourse"/>
+    <fullyQualifiedTypeName name="dataAccess.IStudent"/>
+    <fullyQualifiedTypeName name="dataAccess.IInstructore"/>
+    <fullyQualifiedTypeName name="dataLogger.Logger"/>
+    <fullyQualifiedTypeName name="dataLogger.DatabaseLogger"/>
+    <fullyQualifiedTypeName name="dataLogger.FileLogger"/>
+    <fullyQualifiedTypeName name="dataLogger.MailLogger"/>
+    <fullyQualifiedTypeName name="dataAccess.HibernateStudent"/>
+    <fullyQualifiedTypeName name="manager.StudentManager"/>
+    <fullyQualifiedTypeName name="dataAccess.JdbcStudent"/>
+    <fullyQualifiedTypeName name="dataAccess.HibernateInstructore"/>
+    <fullyQualifiedTypeName name="entities.Instructore"/>
+    <fullyQualifiedTypeName name="manager.InstructoreManager"/>
+    <fullyQualifiedTypeName name="dataAccess.JdbcInteructore"/>
+    <fullyQualifiedTypeName name="dataAccess.Hibernate"/>
+    <fullyQualifiedTypeName name="entities.Category"/>
+    <fullyQualifiedTypeName name="manager.CategoryManager"/>
+    <fullyQualifiedTypeName name="dataAccess.JdbcCategory"/>
+    <fullyQualifiedTypeName name="entities.Student"/>
+    <fullyQualifiedTypeName name="entities.Course"/>
+    <fullyQualifiedTypeName name="dataAccess.HibernateCourse"/>
+    <fullyQualifiedTypeName name="manager.CourseManager"/>
+    <fullyQualifiedTypeName name="dataAccess.JdbcCourse"/>
+</qualifiedTypeNameHistroy>
