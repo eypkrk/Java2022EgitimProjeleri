@@ -1,0 +1,96 @@
+package kodlama.io.Kodlama.io.Devs.business.concretes;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kodlama.io.Kodlama.io.Devs.business.abstracts.LanguageService;
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstarcts.ILanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.Language;
+
+@Service
+public class LanguageManager implements LanguageService{
+	private ILanguageRepository languageRepository;
+	
+	
+	@Autowired
+	public LanguageManager(ILanguageRepository languageRepository) {
+		
+		this.languageRepository = languageRepository;
+	}
+
+
+
+	@Override
+	public List<Language> getall() {
+		//iş-kuralları
+		return languageRepository.getall();
+	}
+
+
+
+	@Override
+	public void addLanguage(Language language) throws Exception {
+		if(isIdExist(language.getId())) {
+			throw new Exception("Bu id mevcuttur");
+		}
+		isNameValid(language.getName());
+	
+		languageRepository.add(language);
+
+	}
+
+
+	@Override
+	public void deleteLanguage(int id) throws Exception {
+		if(!isIdExist(id)) {
+		throw new Exception("Bu id yoktur");	
+		}
+		languageRepository.delete(id);
+		
+	}
+
+
+
+	@Override
+	public void updateLanguage(int id,Language language) throws Exception {
+		if(!isIdExist(id)) {
+			throw new Exception("Bu id yoktur");
+		}
+		isNameValid(language.getName());
+		languageRepository.update(id, language);
+	}
+
+
+
+	@Override
+	public Language getByid(int id) throws Exception {
+		// TODO Auto-generated method stub
+		if(!isIdExist(id)) {
+			throw new Exception("Bu id yoktur");
+		}
+		return languageRepository.getById(id);
+	}
+
+	private boolean isIdExist(int id) {
+		for (Language language : getall()) {
+			if(language.getId() == id) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private boolean isNameValid(String name) {
+		if (name.isEmpty()) {
+			throw new Exception("İsim boş olamaz");
+		}
+		for (Language languagee : languageRepository.getall()) {
+			if(languagee.getName().equalsIgnoreCase(name)) {
+			throw new Exception("Aynı isim olamaz");
+		}
+			return true;
+	}
+	}
+}
