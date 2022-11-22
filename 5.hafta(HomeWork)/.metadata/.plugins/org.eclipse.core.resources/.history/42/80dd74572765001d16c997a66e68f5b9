@@ -1,0 +1,26 @@
+package kodlama.io.programingLanguages.webApi;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PostMapping;
+
+import kodlama.io.programingLanguages.business.abstracts.TechnologyService;
+import kodlama.io.programingLanguages.business.request.CreateTechnologyRequest;
+import kodlama.io.programingLanguages.business.response.GetAllTechnologyResponse;
+
+public class TechnologyController {
+	private TechnologyService technologyService;
+	
+	public TechnologyController(TechnologyService technologyService) {
+		this.technologyService = technologyService;
+	}
+	
+	public List<GetAllTechnologyResponse> getAll(){
+		return technologyService.getAll();
+	}
+	
+	@PostMapping
+	public void add(CreateTechnologyRequest createTechnologyRequest) {
+		this.technologyService.add(createTechnologyRequest);
+	}
+}

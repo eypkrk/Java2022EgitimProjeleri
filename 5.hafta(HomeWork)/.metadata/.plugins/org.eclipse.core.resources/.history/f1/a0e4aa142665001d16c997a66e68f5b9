@@ -1,0 +1,5 @@
+package kodlama.io.programingLanguages.business.concretes;
+
+public class TechnologyManager {
+
+}

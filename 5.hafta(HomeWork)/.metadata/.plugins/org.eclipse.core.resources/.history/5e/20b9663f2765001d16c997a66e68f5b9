@@ -1,0 +1,44 @@
+package kodlama.io.programingLanguages.business.concretes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import kodlama.io.programingLanguages.business.abstracts.TechnologyService;
+import kodlama.io.programingLanguages.business.request.CreateLanguageRequest;
+import kodlama.io.programingLanguages.business.request.CreateTechnologyRequest;
+import kodlama.io.programingLanguages.business.response.GetAllTechnologyResponse;
+import kodlama.io.programingLanguages.dataAccess.abstracts.TechnologyRepository;
+import kodlama.io.programingLanguages.entities.Technology;
+
+public class TechnologyManager implements TechnologyService{
+	private TechnologyRepository technologyRepository;
+	
+	@Autowired
+	public TechnologyManager(TechnologyRepository technologyRepository) {
+		this.technologyRepository = technologyRepository;
+	}
+
+	public List<GetAllTechnologyResponse> getAll(){
+		List<Technology> technologies = technologyRepository.findAll();
+		List<GetAllTechnologyResponse> technologyResponses = new ArrayList<>();
+		
+		for (Technology technology : technologies) {
+			GetAllTechnologyResponse responseItem = new GetAllTechnologyResponse();
+			responseItem.setId(technology.getId());
+			responseItem.setName(technology.getName());
+			technologyResponses.add(responseItem);
+		}
+		return technologyResponses;
+		
+	}
+
+	@Override
+	public void add(CreateTechnologyRequest createTechnologyRequest) {
+		Technology technology = new Technology();
+		technology.setName(createTechnologyRequest.getName());
+		this.technologyRepository.save(technology);
+		
+	}
+}

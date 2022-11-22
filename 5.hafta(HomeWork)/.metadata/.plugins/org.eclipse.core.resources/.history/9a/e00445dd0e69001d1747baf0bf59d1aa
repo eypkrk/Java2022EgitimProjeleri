@@ -1,0 +1,15 @@
+package kodlama.io.programingLanguages.business.abstracts;
+
+import java.util.List;
+
+import kodlama.io.programingLanguages.business.request.CreateLanguageRequest;
+import kodlama.io.programingLanguages.business.request.DeleteLanguageRequest;
+import kodlama.io.programingLanguages.business.request.UpdateLanguageRequest;
+import kodlama.io.programingLanguages.business.response.GetAllLanguageResponse;
+
+public interface LanguageService {
+	List<GetAllLanguageResponse> getAll();
+	void add(CreateLanguageRequest createLanguageRequest);
+	void delete(DeleteLanguageRequest deleteLanguageRequest);
+	void update(UpdateLanguageRequest updateLanguageRequest);
+}
